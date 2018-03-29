@@ -1,7 +1,6 @@
-# 前端项目 模板
+## 前端项目 模板
 
-## 安装
-***
+### 安装
 项目地址：（`git clone`）
 ```shell
   git clone 
@@ -16,8 +15,7 @@
   yarn install
 ```
 
-## 启动(接下来都直接使用yarn，如果习惯npm直接替换掉yarn就可以)
-***
+### 启动(接下来都直接使用yarn，如果习惯npm直接替换掉yarn就可以)
 ##### 启动服务(http://localhost:8084/)
   * 本地起服务打包的js在内存内
 ```shell
@@ -32,10 +30,9 @@
   yarn run build:pro  // 正式环境
 ```
 
-## Explain
+### Explain
 
-### 目录结构 ###
-***
+#### 目录结构 ####
 <pre>
 ├── docs                     // 存储项目文档目录，一般采用markdown编辑
 ├── webpack.config.js        // 构建服务和webpack配置
