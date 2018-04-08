@@ -3,7 +3,7 @@
 ### 安装
 项目地址：（`git clone`）
 ```shell
-  git clone 
+  git clone git@github.com:xieshiyi/scaffold-react.git
 ```
 
 通过`npm`或者`yarn`安装本地服务第三方依赖模块,
