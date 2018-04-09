@@ -1,6 +1,7 @@
 const path = require('path');
 const webpack = require('webpack');
 const HtmlWebpackPlugin = require('html-webpack-plugin');
+const UglifyJsPlugin = require('uglifyjs-webpack-plugin')
 const os = require('os')
 
 module.exports = {
@@ -72,18 +73,18 @@ module.exports = {
     watchOptions:{
         ignored: /node_modules/,
     },
-    devServer: {
+    devServer: {                    //配置此静态文件服务器，可以用来预览打包后项目
         host:'localhost',
         port: 8084,                 //设置默认监听端口，如果省略，默认为8080
         historyApiFallback: true,   //在开发单页应用时非常有用，它依赖于HTML5 history API，如果设置为true，所有的跳转将指向index.html
         hot: true,                  //是否热部署
         quiet: false,               //让dev server处于静默的状态启动
+        compress: true,             //开发服务器是否启动gzip等压缩
         stats: {
-            colors: true, // color is life
-            chunks: false, // this reduces the amount of stuff I see in my terminal; configure to your needs
+            colors: true,           // color is life
+            chunks: false,          // this reduces the amount of stuff I see in my terminal; configure to your needs
             'errors-only': true
         },
-
         proxy: {
             "/api": {
                 target: "http://localhost:8080/"
@@ -103,6 +104,43 @@ module.exports = {
             template: './index.html',
             filename: 'index.html',
             chunks: ['app','vendor'],
-        })
+        }),
+        new UglifyJsPlugin({
+            uglifyOptions: {
+            //   ecma: 8,
+              // warnings: false,
+              // parse: {
+              //   ecma: true
+              // },
+              compress: {
+                drop_debugger:true,
+                evaluate: true,
+                if_return: true,
+                join_vars: true
+            },
+            //   mangle: {
+            //     // ...options,
+            //     properties: {
+            //       // mangle property options
+            //     }
+            //   },
+              output: {
+                comments: false,
+                beautify: false,
+                quote_style: 0,
+                semicolons: false
+                // ...options
+              },
+              toplevel: false,
+              // nameCache: null,
+              ie8: false,
+            //   keep_classnames: undefined,
+            //   keep_fnames: false,
+              safari10: false,
+            }
+          })
+        // new webpack.DllReferencePlugin({
+        //     manifest: require(path.join(__dirname, 'dist', 'common.manifest.json')),
+        // })
     ]
 }
