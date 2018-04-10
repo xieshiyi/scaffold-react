@@ -5,8 +5,7 @@ install:
   - npm i -g npm@5.8.0
   - npm install
 script:
-  - npm run build:test
-  - npm run build:pro
+  - npm run test
 branches:
   only:
     - master
