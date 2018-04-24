@@ -50,6 +50,10 @@
 │   │   └── index.js         // 接口和请求方法文件
 │   ├── modules              // 所有的模块文件夹
 │   └── pages                // 页面管理文件夹
-         ├── ...files        // 所需要的页面文件
-         ├── base.css        // 页面中公共的css样式
+│       ├── Home             // 整体路由管理入口页面
+│       │    ├── index.js
+│       │    ├── Home.jsx
+│       │    └── Home.css
+│       ├── ...files         // 所需要的页面文件
+│       ├── base.css         // 页面中公共的css样式
 </pre>
