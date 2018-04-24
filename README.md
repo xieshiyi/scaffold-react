@@ -1,5 +1,7 @@
 ## 前端项目 模板
 
+[![build-status](https://img.shields.io/travis/xieshiyi/scaffold-react.svg)](https://travis-ci.org/xieshiyi/scaffold-react/builds) 
+
 ### 安装
 项目地址：（`git clone`）
 ```shell
