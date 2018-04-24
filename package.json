@@ -1,6 +1,6 @@
 {
   "name": "<your progress name>",
-  "version": "1.0.0",
+  "version": "1.0.1",
   "description": "基于react开发的模板",
   "main": "./src/app/app.js",
   "scripts": {
