@@ -1,5 +1,5 @@
 {
-  "name": "scaffold-react",
+  "name": "<your progress name>",
   "version": "1.0.0",
   "description": "基于react开发的模板",
   "main": "./src/app/app.js",
@@ -11,13 +11,11 @@
   },
   "repository": {
     "type": "git",
-    "url": ""
+    "url": "<your repository url>"
   },
-  "author": "Sherry",
+  "author": "<author>",
   "license": "ISC",
   "dependencies": {
-    "antd": "^3.3.3",
-    "object-param": "^1.0.2",
     "react": "^16.2.0",
     "react-dom": "^16.2.0",
     "react-quill": "^1.2.6",
@@ -25,6 +23,8 @@
     "uglifyjs-webpack-plugin": "^1.2.4"
   },
   "devDependencies": {
+    "antd": "^3.3.3",
+    "object-param": "^1.0.2",
     "autoprefixer": "^8.1.0",
     "babel-core": "^6.26.0",
     "babel-loader": "^7.1.2",
