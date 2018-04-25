@@ -6,8 +6,8 @@ import Loadable from 'react-loadable'
 const loading = () => <p>loading...</p>
 
 // 为了解决页面js太大，加载慢的展示问题
-const PageOne = Loadable({
-    loader: () => import('@pages/PageOne'),
+const DemoPage = Loadable({
+    loader: () => import('@pages/DemoPage'),
     loading,
 })
 
@@ -24,13 +24,13 @@ class Home extends Component {
 
     render() {
         return (
-        <div>
+        <div className="flex-h jc-center ai-center">
             <HashRouter>
                 {/* 内容区域 */}
                 <Route
                     exact
                     path="/"
-                    component={PageOne}
+                    component={DemoPage}
                 />
             </HashRouter>
         </div>

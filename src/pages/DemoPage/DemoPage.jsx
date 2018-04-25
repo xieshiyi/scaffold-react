@@ -1,9 +1,10 @@
 import React, {Component} from 'react'
 import {HashRouter, Route, Switch, Link,Redirect} from 'react-router-dom'
 import DB from '@DB'
-import './PageOne.css'
+import Exception from '@comp/Exception'
+import './DemoPage.css'
 
-class PageOne extends Component {
+class DemoPage extends Component {
 	constructor(props) {
         super(props);
 		this.state = {
@@ -16,11 +17,10 @@ class PageOne extends Component {
 
 	render() {
 		return (
-		<div>
-			第一个demo页面
-		</div>
+			// demo展示500错误页
+			<Exception type="500" style={{ minHeight: 500, height: '80%' }}/>
 		)
 	}
 }
 
-export default PageOne
+export default DemoPage
